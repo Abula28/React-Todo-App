@@ -1,0 +1,146 @@
+.main-todo {
+  width: 542px;
+  position: absolute;
+}
+
+.inp-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #25273c;
+  gap: 26px;
+  padding: 20px;
+  border-radius: 6px;
+
+  input {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 100%;
+
+    &::placeholder {
+      color: #6c6e83;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #303247;
+  margin-left: 20px;
+}
+
+.todo-list {
+  margin-top: 24px;
+  width: 100%;
+  background-color: #383a4f;
+  border-radius: 4px;
+  overflow: hidden;
+  .circle {
+    cursor: pointer;
+  }
+
+  .circle.check {
+    background-image: url("../imgs/icon-check.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+.todo {
+  display: flex;
+  align-items: center;
+  background-color: #25273c;
+  gap: 26px;
+  padding: 20px;
+  margin-bottom: 1px;
+  border-radius: 4px;
+  position: relative;
+
+  &.hide {
+    display: none;
+  }
+  p {
+    font-size: 18px;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  button {
+    position: absolute;
+    right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #6c6e83;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+.todo:last-child {
+  margin-bottom: 0px;
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: #6c6e83;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  ul {
+    display: flex;
+    gap: 6px;
+    li {
+      list-style-type: none;
+      color: #6c6e83;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        color: #4777db;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .main-todo {
+    width: 327px;
+  }
+
+  .inp-div {
+    input {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
